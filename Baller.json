@@ -239,7 +239,7 @@
           "name": "Physics2",
           "type": "Physics2::Physics2Behavior",
           "bodyType": "Dynamic",
-          "bullet": false,
+          "bullet": true,
           "fixedRotation": false,
           "canSleep": true,
           "shape": "Circle",
@@ -1110,6 +1110,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/level-1"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/level-2"
     }
   ],
   "externalEvents": [
