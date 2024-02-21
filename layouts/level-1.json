@@ -220,16 +220,6 @@
             "value": "ModVarGlobalTxt"
           },
           "parameters": [
-            "CurrentLevel",
-            "=",
-            "\"Level 1\""
-          ]
-        },
-        {
-          "type": {
-            "value": "ModVarGlobalTxt"
-          },
-          "parameters": [
             "NextLevel",
             "=",
             "\"Level 2\""

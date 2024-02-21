@@ -1174,12 +1174,6 @@
     },
     {
       "folded": true,
-      "name": "CurrentLevel",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "folded": true,
       "name": "NextLevel",
       "type": "string",
       "value": ""
