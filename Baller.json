@@ -221,6 +221,15 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Interface/Interface Bleeps/728f601047e39503df2771c699e7d39447d3701a764e067b7ff7f46aa48f5bee_Bleep_04.aac",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1025,6 +1034,67 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "LevelBottom",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1058,6 +1128,9 @@
             "objectName": "BlockSquare"
           }
         ]
+      },
+      {
+        "objectName": "LevelBottom"
       }
     ]
   },
@@ -1095,15 +1168,27 @@
     },
     {
       "folded": true,
+      "name": "SoundVolume",
+      "type": "number",
+      "value": 50
+    },
+    {
+      "folded": true,
+      "name": "CurrentLevel",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "folded": true,
       "name": "NextLevel",
       "type": "string",
       "value": ""
     },
     {
       "folded": true,
-      "name": "SoundVolume",
+      "name": "BottomCoord",
       "type": "number",
-      "value": 50
+      "value": 0
     }
   ],
   "layouts": [

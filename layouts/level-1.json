@@ -173,6 +173,21 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "LevelBottom",
+      "persistentUuid": "be307570-88f3-4670-9125-3ef52cdad3ac",
+      "width": 0,
+      "x": 0,
+      "y": 704,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [],
@@ -200,6 +215,16 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "value": "ModVarGlobalTxt"
+          },
+          "parameters": [
+            "CurrentLevel",
+            "=",
+            "\"Level 1\""
+          ]
+        },
         {
           "type": {
             "value": "ModVarGlobalTxt"

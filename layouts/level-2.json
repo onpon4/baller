@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.546875,
+    "zoomFactor": 0.5653158055126307,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -728,6 +728,21 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "LevelBottom",
+      "persistentUuid": "479acc82-6b1c-4aea-ac5d-2b60456d16d9",
+      "width": 0,
+      "x": 480,
+      "y": 736,
+      "zOrder": 37,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [],
@@ -755,6 +770,16 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "value": "ModVarGlobalTxt"
+          },
+          "parameters": [
+            "CurrentLevel",
+            "=",
+            "\"Level 2\""
+          ]
+        },
         {
           "type": {
             "value": "ModVarGlobalTxt"
