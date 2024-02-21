@@ -36,6 +36,36 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "GoalButton",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "CollisionObjects",
+                "=",
+                "0"
+              ]
             }
           ]
         }
@@ -215,9 +245,96 @@
                 "Player",
                 "Physics2",
                 "0",
-                "16",
+                "160",
                 "Player.Physics2::MassCenterX()",
                 "Player.Physics2::MassCenterY()-32"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::Density"
+              },
+              "parameters": [
+                "Player",
+                "Physics2",
+                "=",
+                "10"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Animation",
+                    "=",
+                    "\"Heavy\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "728f601047e39503df2771c699e7d39447d3701a764e067b7ff7f46aa48f5bee_Bleep_04.aac",
+                    "",
+                    "SoundVolume",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "Down"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Player",
+                "Animation",
+                "=",
+                "\"Light\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::Density"
+              },
+              "parameters": [
+                "Player",
+                "Physics2",
+                "=",
+                "1"
               ]
             }
           ]
@@ -290,7 +407,7 @@
                 "",
                 "da0877017d351d77a464918a156e243162bb0b7e56598a0812ad49a1e6300e94_Click_01.aac",
                 "no",
-                "",
+                "SoundVolume",
                 ""
               ]
             }
@@ -319,6 +436,35 @@
               "parameters": [
                 "",
                 "\"GoalTimer\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextLevel",
+                    "!=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "NextLevel",
+                    ""
+                  ]
+                }
               ]
             }
           ]

@@ -34,10 +34,10 @@
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
       "backgroundImageResourceName": "",
-      "gdevelopLogoStyle": "light",
+      "gdevelopLogoStyle": "dark",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0,
-      "minDuration": 1.5,
+      "minDuration": 2,
       "progressBarColor": 16777215,
       "progressBarHeight": 20,
       "progressBarMaxWidth": 200,
@@ -48,7 +48,7 @@
     },
     "watermark": {
       "placement": "bottom-left",
-      "showWatermark": true
+      "showWatermark": false
     },
     "authorIds": [
       "x1TFi8nCIyV3Z7iYoAx3Vk2D2Cc2"
@@ -198,6 +198,29 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Interface/Interface Bleeps/da0877017d351d77a464918a156e243162bb0b7e56598a0812ad49a1e6300e94_Click_01.aac",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Small Blue Ball.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Small Blue Ball.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Bleep_04.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "728f601047e39503df2771c699e7d39447d3701a764e067b7ff7f46aa48f5bee_Bleep_04.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Interface/Interface Bleeps/728f601047e39503df2771c699e7d39447d3701a764e067b7ff7f46aa48f5bee_Bleep_04.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -290,7 +313,7 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "Light",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -300,6 +323,35 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "9e26a2e40eaf354f74e07f0d078b64f5f12856d9fe986087e78b8ff3acf93831_Small Red Ball.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Heavy",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Small Blue Ball.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1009,13 +1061,49 @@
       }
     ]
   },
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "CollisionObjects",
+      "objects": [
+        {
+          "name": "CornerLarge"
+        },
+        {
+          "name": "BlockSingle"
+        },
+        {
+          "name": "CornerSmall"
+        },
+        {
+          "name": "BlockLong"
+        },
+        {
+          "name": "BlockWide"
+        },
+        {
+          "name": "BlockSquare"
+        }
+      ]
+    }
+  ],
   "variables": [
     {
       "folded": true,
       "name": "BallMaxSpeed",
       "type": "number",
       "value": 340
+    },
+    {
+      "folded": true,
+      "name": "NextLevel",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "folded": true,
+      "name": "SoundVolume",
+      "type": "number",
+      "value": 50
     }
   ],
   "layouts": [

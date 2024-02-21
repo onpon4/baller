@@ -18,34 +18,10 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.4057518905943825,
+    "zoomFactor": 0.5653158055126308,
     "windowMask": false
   },
-  "objectsGroups": [
-    {
-      "name": "CollisionObjects",
-      "objects": [
-        {
-          "name": "CornerLarge"
-        },
-        {
-          "name": "BlockSingle"
-        },
-        {
-          "name": "CornerSmall"
-        },
-        {
-          "name": "BlockLong"
-        },
-        {
-          "name": "BlockWide"
-        },
-        {
-          "name": "BlockSquare"
-        }
-      ]
-    }
-  ],
+  "objectsGroups": [],
   "variables": [],
   "instances": [
     {
@@ -210,6 +186,31 @@
         "includeConfig": 0
       },
       "target": "LevelEvents"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarGlobalTxt"
+          },
+          "parameters": [
+            "NextLevel",
+            "=",
+            "\"\""
+          ]
+        }
+      ]
     }
   ],
   "layers": [
