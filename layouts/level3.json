@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.5653158055126307,
+    "zoomFactor": 1.0615714305219976,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -92,7 +92,7 @@
       "name": "BlockWide",
       "persistentUuid": "272115b2-40b7-4c34-a089-b3e74801ae36",
       "width": 0,
-      "x": 832,
+      "x": 800,
       "y": 512,
       "zOrder": 41,
       "numberProperties": [],
@@ -107,7 +107,7 @@
       "name": "BlockLong",
       "persistentUuid": "178a8d81-c125-4c3b-9559-1dbb1b5f1752",
       "width": 0,
-      "x": 992,
+      "x": 960,
       "y": 320,
       "zOrder": 42,
       "numberProperties": [],
@@ -122,8 +122,8 @@
       "name": "GoalButton",
       "persistentUuid": "9a265d5d-040a-430b-9a8f-0c63a7c8c226",
       "width": 0,
-      "x": 935,
-      "y": 573,
+      "x": 871,
+      "y": 576,
       "zOrder": 43,
       "numberProperties": [],
       "stringProperties": [],
@@ -240,6 +240,39 @@
           "width": 0
         }
       ],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "UI",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
       "effects": [
         {
           "effectType": "Scene3D::HemisphereLight",
