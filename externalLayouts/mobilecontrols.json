@@ -1,0 +1,35 @@
+{
+  "associatedLayout": "Level1",
+  "name": "MobileControls",
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 320,
+      "layer": "UI",
+      "name": "TransparentDarkJoystick",
+      "persistentUuid": "fd21fcb8-8192-4609-bd1e-97c3b309fa23",
+      "width": 320,
+      "x": 263,
+      "y": 463,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "editionSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 0.546875,
+    "windowMask": false
+  }
+}

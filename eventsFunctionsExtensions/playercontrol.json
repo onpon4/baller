@@ -1,0 +1,188 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "PlayerControl",
+  "previewIconUrl": "",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Move the player to the left.",
+      "fullName": "PlayerLeft",
+      "functionType": "Action",
+      "name": "PlayerLeft",
+      "sentence": "Move _PARAM1_ to the left with a max speed of _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::LinearVelocityX"
+              },
+              "parameters": [
+                "Player",
+                "Physics2",
+                ">",
+                "-MaxSpeed"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::ApplyForce"
+              },
+              "parameters": [
+                "Player",
+                "Physics2",
+                "-1",
+                "0",
+                "Player.Physics2::MassCenterX()",
+                "Player.Physics2::MassCenterY()-32"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Physics2",
+                    "<",
+                    "-MaxSpeed"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Physics2",
+                    "=",
+                    "-MaxSpeed"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "Player",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "MaxSpeed",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Move the player to the right.",
+      "fullName": "PlayerRight",
+      "functionType": "Action",
+      "name": "PlayerRight",
+      "sentence": "Move _PARAM1_ to the right with a max speed of _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::LinearVelocityX"
+              },
+              "parameters": [
+                "Player",
+                "Physics2",
+                "<",
+                "MaxSpeed"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::ApplyForce"
+              },
+              "parameters": [
+                "Player",
+                "Physics2",
+                "1",
+                "0",
+                "Player.Physics2::MassCenterX()",
+                "Player.Physics2::MassCenterY()-32"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Physics2",
+                    ">",
+                    "MaxSpeed"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityX"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Physics2",
+                    "=",
+                    "MaxSpeed"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "Player",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "MaxSpeed",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

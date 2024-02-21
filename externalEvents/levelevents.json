@@ -1,5 +1,5 @@
 {
-  "associatedLayout": "Level 1",
+  "associatedLayout": "Level1",
   "lastChangeTimeStamp": 0,
   "name": "LevelEvents",
   "events": [
@@ -75,6 +75,69 @@
                 "LevelBottom"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SystemInfo::HasTouchScreen"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+                  },
+                  "parameters": [
+                    "",
+                    "\"MobileControls\"",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "SystemInfo::HasTouchScreen"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::ActivateControl"
+                  },
+                  "parameters": [
+                    "TransparentDarkJoystick",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "TransparentDarkJoystick"
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -94,11 +157,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "Left"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "TransparentDarkJoystick",
+                    "\"Left\"",
+                    ""
+                  ]
+                }
               ]
             },
             {
@@ -121,7 +202,7 @@
               "parameters": [
                 "Player",
                 "Physics2",
-                "-0.75",
+                "-1",
                 "0",
                 "Player.Physics2::MassCenterX()",
                 "Player.Physics2::MassCenterY()-32"
@@ -165,11 +246,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "Right"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Right"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "TransparentDarkJoystick",
+                    "\"Right\"",
+                    ""
+                  ]
+                }
               ]
             },
             {
@@ -192,7 +291,7 @@
               "parameters": [
                 "Player",
                 "Physics2",
-                "0.75",
+                "1",
                 "0",
                 "Player.Physics2::MassCenterX()",
                 "Player.Physics2::MassCenterY()-32"
@@ -236,11 +335,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "Down"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Down"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "TransparentDarkJoystick",
+                    "\"Down\"",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -256,17 +373,6 @@
                 "160",
                 "Player.Physics2::MassCenterX()",
                 "Player.Physics2::MassCenterY()-32"
-              ]
-            },
-            {
-              "type": {
-                "value": "Physics2::Density"
-              },
-              "parameters": [
-                "Player",
-                "Physics2",
-                "=",
-                "10"
               ]
             }
           ],
@@ -295,6 +401,17 @@
                 },
                 {
                   "type": {
+                    "value": "Physics2::Density"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Physics2",
+                    "=",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "PlaySound"
                   },
                   "parameters": [
@@ -314,12 +431,55 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyReleased"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "Down"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Down"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                      },
+                      "parameters": [
+                        "TransparentDarkJoystick",
+                        "\"Down\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -434,19 +594,15 @@
                 ">=",
                 "2"
               ]
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
-                "value": "RemoveTimer"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "",
-                "\"GoalTimer\""
-              ]
+              "parameters": []
             }
           ],
+          "actions": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -500,6 +656,18 @@
                 "Player",
                 ">",
                 "LevelBottom.Y()"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"GoalTimer\"",
+                ">=",
+                "0"
               ]
             }
           ],

@@ -230,6 +230,32 @@
         "name": "NewSprite",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent dark joystick border.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Transparent dark joystick border.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Multitouch joysticks/2d2dc12926c7c9d9bdc721625d067fa504c6d560f5f554bfc56ab9b7f7140244_Transparent dark joystick border.png",
+          "name": "Transparent dark joystick border.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent dark joystick thumb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Transparent dark joystick thumb.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Multitouch joysticks/ced42a0bbf18fae399df9c45c2323454cfbed06e57b0aed47a6b036781a1bd64_Transparent dark joystick thumb.png",
+          "name": "Transparent dark joystick thumb.png"
+        }
       }
     ],
     "resourceFolders": []
@@ -244,6 +270,12 @@
       "variables": [],
       "effects": [],
       "behaviors": [
+        {
+          "name": "BallControls",
+          "type": "PlayerControl::BallControls",
+          "MoveDirection": 0,
+          "MaxSpeed": 340
+        },
         {
           "name": "Physics2",
           "type": "Physics2::Physics2Behavior",
@@ -1188,11 +1220,15 @@
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/level-1"
+      "referenceTo": "/layouts/level1"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/level-2"
+      "referenceTo": "/layouts/level2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/level3"
     }
   ],
   "externalEvents": [
@@ -1204,9 +1240,22 @@
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/gamepads"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/spritemultitouchjoystick"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/smoothcamera"
     }
   ],
-  "externalLayouts": [],
+  "externalLayouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/mobilecontrols"
+    }
+  ],
   "externalSourceFiles": []
 }
