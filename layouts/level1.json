@@ -5,7 +5,7 @@
   "name": "Level1",
   "r": 0,
   "standardSortMethod": true,
-  "stopSoundsOnStartup": true,
+  "stopSoundsOnStartup": false,
   "title": "",
   "v": 0,
   "uiSettings": {
