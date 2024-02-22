@@ -431,46 +431,38 @@
           "conditions": [
             {
               "type": {
-                "value": "BuiltinCommonInstructions::And"
+                "inverted": true,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Down"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
               "subInstructions": [
                 {
                   "type": {
                     "inverted": true,
-                    "value": "KeyPressed"
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
                   },
                   "parameters": [
-                    "",
-                    "Down"
+                    "TransparentDarkJoystick",
+                    "\"Down\"",
+                    ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Or"
+                    "inverted": true,
+                    "value": "SystemInfo::HasTouchScreen"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                      },
-                      "parameters": [
-                        "TransparentDarkJoystick",
-                        "\"Down\"",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
+                  "parameters": [
+                    ""
                   ]
                 }
               ]
